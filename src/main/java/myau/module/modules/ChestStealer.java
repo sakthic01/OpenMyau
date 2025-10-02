@@ -196,7 +196,7 @@ public class ChestStealer extends Module {
 
     @Override
     public void verifyValue(String mode) {
-        switch (string) {
+        switch (mode) {
             case "min-delay":
                 if (this.minDelay.getValue() > this.maxDelay.getValue()) {
                     this.maxDelay.setValue(this.minDelay.getValue());
