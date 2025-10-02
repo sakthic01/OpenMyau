@@ -38,8 +38,8 @@ public class ChestStealer extends Module {
         return gameType == GameType.SURVIVAL || gameType == GameType.ADVENTURE;
     }
 
-    private void shiftClick(int integer1, int integer2) {
-        mc.playerController.windowClick(integer1, integer2, 0, 1, mc.thePlayer);
+    private void shiftClick(int windowId, int slotId) {
+        mc.playerController.windowClick(windowId, slotId, 0, 1, mc.thePlayer);
     }
 
     public ChestStealer() {
@@ -195,7 +195,7 @@ public class ChestStealer extends Module {
     }
 
     @Override
-    public void verifyValue(String string) {
+    public void verifyValue(String mode) {
         switch (string) {
             case "min-delay":
                 if (this.minDelay.getValue() > this.maxDelay.getValue()) {

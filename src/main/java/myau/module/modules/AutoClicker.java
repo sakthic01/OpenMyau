@@ -125,7 +125,7 @@ public class AutoClicker extends Module {
     }
 
     @Override
-    public void verifyValue(String string) {
+    public void verifyValue(String mode) {
         if (this.minCPS.getName().equals(string)) {
             if (this.minCPS.getValue() > this.maxCPS.getValue()) {
                 this.maxCPS.setValue(this.minCPS.getValue());

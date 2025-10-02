@@ -299,8 +299,8 @@ public class BedNuker extends Module {
         }
     }
 
-    private Color getProgressColor(int integer) {
-        switch (integer) {
+    private Color getProgressColor(int mode) {
+        switch (mode) {
             case 1:
                 float progress = this.calcProgress();
                 if (progress <= 0.5F) {

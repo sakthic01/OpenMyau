@@ -100,9 +100,7 @@ public class KillAura extends Module {
     }
 
     private boolean performAttack(float yaw, float pitch) {
-        System.out.println("atk 1");
         if (!Myau.playerStateManager.digging && !Myau.playerStateManager.placing) {
-            System.out.println("atk 2");
             if (this.isPlayerBlocking() && this.autoBlock.getValue() != 1) {
                 return false;
             } else if (this.attackDelayMS > 0L) {
@@ -114,7 +112,6 @@ public class KillAura extends Module {
                         && RotationUtil.rayTrace(this.target.getBox(), yaw, pitch, this.attackRange.getValue()) == null) {
                     return false;
                 } else {
-                    System.out.println("atk 3");
                     ((IAccessorPlayerControllerMP) mc.playerController).callSyncCurrentPlayItem();
                     PacketUtil.sendPacket(new C02PacketUseEntity(this.target.getEntity(), Action.ATTACK));
                     if (mc.playerController.getCurrentGameType() != GameType.SPECTATOR) {
@@ -923,7 +920,7 @@ public class KillAura extends Module {
     }
 
     @Override
-    public void verifyValue(String string) {
+    public void verifyValue(String mode) {
         if (!this.autoBlock.getName().equals(string) && !this.autoBlockCPS.getName().equals(string)) {
             if (this.swingRange.getName().equals(string)) {
                 if (this.swingRange.getValue() < this.attackRange.getValue()) {
