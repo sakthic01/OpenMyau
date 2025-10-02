@@ -100,7 +100,9 @@ public class KillAura extends Module {
     }
 
     private boolean performAttack(float yaw, float pitch) {
+        System.out.println("atk 1");
         if (!Myau.playerStateManager.digging && !Myau.playerStateManager.placing) {
+            System.out.println("atk 2");
             if (this.isPlayerBlocking() && this.autoBlock.getValue() != 1) {
                 return false;
             } else if (this.attackDelayMS > 0L) {
@@ -112,6 +114,7 @@ public class KillAura extends Module {
                         && RotationUtil.rayTrace(this.target.getBox(), yaw, pitch, this.attackRange.getValue()) == null) {
                     return false;
                 } else {
+                    System.out.println("atk 3");
                     ((IAccessorPlayerControllerMP) mc.playerController).callSyncCurrentPlayItem();
                     PacketUtil.sendPacket(new C02PacketUseEntity(this.target.getEntity(), Action.ATTACK));
                     if (mc.playerController.getCurrentGameType() != GameType.SPECTATOR) {
