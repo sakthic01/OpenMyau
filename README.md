@@ -4,6 +4,10 @@ French dogshit 1.8.9 Forge Client Source code eclipse ready (run/build able)
 
 ![1](/images/image.png)
 
+Deobfuscated by [DeepSeek-R1](https://github.com/deepseek-ai/DeepSeek-R1)
+
+<img src="https://github.com/deepseek-ai/DeepSeek-V2/blob/main/figures/logo.svg?raw=true" width="60%" alt="DeepSeek-R1" />
+
 ## Description
 
 Some French gay motherfuckers coded this haked client with bypasses that are always behind mainstream clients updates take at least a month and are usually outdated skidded trash.
